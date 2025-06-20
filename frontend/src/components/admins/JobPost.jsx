@@ -528,14 +528,15 @@ function JobPost() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="perksAndBenefits" className="text-sm font-medium text-gray-700">Perks & Benefits (Optional)</Label>
+                  <Label htmlFor="perksAndBenefits" className="text-sm font-medium text-gray-700">Perks & Benefits *</Label>
                   <Textarea
                     id="perksAndBenefits"
-                    placeholder="List perks and benefits, e.g., Health Insurance, Paid Time Off..."
+                    placeholder="List perks and benefits, e.g., Health Insurance, Paid Time Off... (Required)"
                     value={formData.perksAndBenefits}
                     onChange={(e) => handleChange("perksAndBenefits", e.target.value)}
                     rows={4}
                     className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                    required
                   />
                 </div>
                 <div>
