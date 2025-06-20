@@ -29,8 +29,8 @@ The **Job Portal** is a modern, full-featured platform for job seekers and recru
 
 - **Frontend:** React.js, Tailwind CSS, Shadcn/UI, Redux Toolkit  
 - **Backend:** Node.js, Express.js, MongoDB  
-- **Deployment:** Render / Vercel / Netlify  
-- **Voice AI (optional):** react-speech-recognition
+- **Deployment:** Render 
+
 
 ---
 
@@ -41,7 +41,6 @@ The **Job Portal** is a modern, full-featured platform for job seekers and recru
 - 🧑‍💼 Job seekers can browse and apply for jobs
 - 📄 Resume upload and profile management
 - 🔎 Filter and sort jobs by category, location, etc.
-- 💬 Voice assistant integration (optional)
 - 💾 Save jobs & track applied jobs
 - 📧 Email notifications for key actions
 - 🏢 Company management for recruiters
