@@ -6,6 +6,7 @@ import axios from "axios";
 import { USER_API_END_POINT } from "@/utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setUser } from "@/redux/slice/authSlice";
+import { resetSavedJobs } from "@/redux/slice/jobSlice";
 import AuthCard from "../shared/ui/AuthCard";
 import FormInputField from "../shared/ui/FormInputField";
 import RoleSelector from "../shared/ui/RoleSelector";
@@ -38,6 +39,7 @@ const Login = () => {
       });
       
       if (res.data.success) {
+        dispatch(resetSavedJobs());
         dispatch(setUser(res.data.user));
         navigate("/");
         toast.success(res.data.message);
