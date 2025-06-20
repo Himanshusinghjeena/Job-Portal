@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from './ui/button'
 import { Bookmark, BookmarkCheck } from 'lucide-react'
 import { Avatar, AvatarImage } from './ui/avatar'
@@ -19,6 +19,10 @@ const Job = ({job}) => {
     const [isJobSavedOptimistic, setIsJobSavedOptimistic] = useState(
         user ? savedJobs.some(savedJob => savedJob._id === job._id) : false
     );
+
+    useEffect(() => {
+        setIsJobSavedOptimistic(user ? savedJobs.some(savedJob => savedJob._id === job._id) : false);
+    }, [savedJobs, user, job._id]);
 
     const daysAgoFunction = (mongodbTime) => {
         const createdAt = new Date(mongodbTime);
