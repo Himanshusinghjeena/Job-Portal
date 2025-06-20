@@ -35,6 +35,9 @@ const AppliedJobTable = () => {
               {!allAppliedJobs || allAppliedJobs.length <= 0 ? (
                 <TableRow>
                   <TableCell colSpan={4} className="text-center h-20">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
+                      Applied Jobs
+                    </h1>
                     You Haven't Applied for any Job Till Now.
                   </TableCell>
                 </TableRow>
