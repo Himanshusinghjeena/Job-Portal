@@ -127,6 +127,10 @@ function JobPost() {
         toast.error("Perks & Benefits is required.");
         return;
       }
+      if (!formData.salary) {
+        toast.error("Salary is required.");
+        return;
+      }
 
       if (formData.expiryDate) {
         const today = new Date();
@@ -495,7 +499,7 @@ function JobPost() {
               <h2 className="text-xl font-semibold text-gray-800 mb-6">Other Details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="salary" className="text-sm font-medium text-gray-700">Salary (Optional)</Label>
+                  <Label htmlFor="salary" className="text-sm font-medium text-gray-700">Salary *</Label>
                   <Input
                     type="text"
                     id="salary"
@@ -503,6 +507,7 @@ function JobPost() {
                     value={formData.salary}
                     onChange={(e) => handleChange("salary", e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
