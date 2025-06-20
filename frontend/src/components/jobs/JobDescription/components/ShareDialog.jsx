@@ -7,7 +7,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { toast } from 'sonner';
 
 const ShareDialog = ({ job }) => {
-  const shareableJob = `http://localhost:5173/description/${job?._id}`;
+  const shareableJob = `https://job-portal-frontend-u1fz.onrender.com/description/${job?._id}`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shareableJob);
