@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to HireSmart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #2563eb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0 0 8px 8px;
+        }
+        .highlight {
+            color: #2563eb;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .divider {
+            border-top: 1px solid #e5e7eb;
+            margin: 20px 0;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .feature {
+            text-align: center;
+            padding: 15px;
+            flex: 1;
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to HireSmart!</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span class="highlight">{{fullName}}</span>,</p>
+        
+        <p>Welcome aboard! We're thrilled to have you join our community of professionals and job seekers. Your account has been successfully created, and you're now ready to explore exciting career opportunities.</p>
+
+        <div class="divider"></div>
+
+        <p><strong>Here's what you can do now:</strong></p>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <p>Complete your profile</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <p>Browse jobs</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <p>Track applications</p>
+            </div>
+        </div>
+
+        <p>To get started, we recommend:</p>
+        <ul>
+            <li>Completing your profile with your latest information</li>
+            <li>Uploading your resume for quick applications</li>
+            <li>Setting up job alerts for your preferred positions</li>
+        </ul>
+
+        <div class="footer">
+            <p>We're here to help you succeed in your career journey!</p>
+            <p>Best regards,<br>The Job Portal Team</p>
+        </div>
+    </div>
+</body>
+</html>

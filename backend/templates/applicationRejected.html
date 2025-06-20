@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #dc3545; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0 0 8px 8px;
+        }
+        .highlight {
+            color: #dc3545; /* Red color for rejected */
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .divider {
+            border-top: 1px solid #e5e7eb;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Update on Your Application</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span class="highlight">{{fullName}}</span>,</p>
+        
+        <p>Thank you for your interest in the position of <span class="highlight">{{jobTitle}}</span> at <span class="highlight">{{companyName}}</span>.</p>
+        
+        <p>After careful consideration, we regret to inform you that your application was not selected for further consideration at this time.</p>
+
+        <div class="divider"></div>
+
+        <p>We receive a high volume of applications, and the selection process is very competitive. We appreciate the time and effort you invested in your application.</p>
+
+        <div class="footer">
+            <p>We wish you the best of luck in your job search.</p>
+            <p>Best regards,<br>The HireSmart Team</p>
+        </div>
+    </div>
+</body>
+</html> 

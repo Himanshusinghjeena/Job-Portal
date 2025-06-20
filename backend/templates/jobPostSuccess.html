@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Posted Successfully</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 20px;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2196F3;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Job Posted Successfully</h1>
+    <p>Dear {{recruiterName}},</p>
+    <p>Your job posting for the position of <strong>{{jobTitle}}</strong> has been successfully published.</p>
+    <p>Thank you for using our platform to find the best candidates.</p>
+    <p class="footer">Best regards,<br/>Job Portal Team</p>
+  </div>
+</body>
+</html>

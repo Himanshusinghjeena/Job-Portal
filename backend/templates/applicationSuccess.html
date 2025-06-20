@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #2563eb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0 0 8px 8px;
+        }
+        .highlight {
+            color: #2563eb;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .divider {
+            border-top: 1px solid #e5e7eb;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Application Submitted Successfully!</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span class="highlight">{{fullName}}</span>,</p>
+        
+        <p>We are pleased to inform you that your application for the position of <span class="highlight">{{jobTitle}}</span> at <span class="highlight">{{companyName}}</span> has been received successfully.</p>
+        
+        <p>Your application is now being reviewed by our recruitment team. We appreciate your interest in joining our organization and will contact you soon regarding the next steps in the selection process.</p>
+
+        <div class="divider"></div>
+
+        <p><strong>What happens next?</strong></p>
+        <ul>
+            <li>Our team will review your application</li>
+            <li>If your profile matches our requirements, we'll contact you for the next round</li>
+            <li>You can check your application status in your dashboard</li>
+        </ul>
+
+        <div class="footer">
+            <p>Thank you for choosing Job Portal for your career journey.</p>
+            <p>Best regards,<br>The Job Portal Team</p>
+        </div>
+    </div>
+</body>
+</html>

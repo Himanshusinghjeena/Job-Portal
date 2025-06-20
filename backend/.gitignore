@@ -1,0 +1,10 @@
+# Dependencies - Don't commit node_modules folder
+node_modules/
+
+# Environment Variables - Keep your secrets safe!
+.env
+.env.local
+.env.*
+.env.development
+.env.test
+.env.production
