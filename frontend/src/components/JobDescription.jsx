@@ -51,7 +51,7 @@ const JobDescription = () => {
 
   const handleShareClick = (job) => {
     setSelectedJob(job);
-    shareableJob.current = `http://localhost:5173/description/${job?._id}`;
+    shareableJob.current = `https://job-portal-frontend-u1fz.onrender.com/description/${job?._id}`;
   };
 
   const { user } = useSelector((store) => store.auth);
