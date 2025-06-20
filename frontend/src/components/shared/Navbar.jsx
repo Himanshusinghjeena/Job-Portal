@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import axios from "axios";
 import { USER_API_END_POINT } from "@/utils/constant";
 import { setUser } from "@/redux/slice/authSlice";
+import { resetSavedJobs } from "@/redux/slice/jobSlice";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -33,6 +34,7 @@ const Navbar = () => {
       });
       if (res.data.success) {
         dispatch(setUser(null));
+        dispatch(resetSavedJobs());
         navigate("/");
         toast.success("Logged out successfully");
       }
