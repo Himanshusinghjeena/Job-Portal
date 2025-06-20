@@ -73,8 +73,8 @@ npm install
 npm run dev
 ```
 
-- Frontend: http://localhost:5173
-- Backend: http://localhost:5000
+- Frontend: https://job-portal-frontend-u1fz.onrender.com
+- Backend: https://job-portal-gs15.onrender.com
 
 ---
 
