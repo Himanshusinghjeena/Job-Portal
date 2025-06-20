@@ -92,6 +92,9 @@ const AppliedJobAccordion = () => {
 
   return (
     <>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
+        Applied Jobs
+      </h1>
       {loading ? (
         <Loader/>
       ) : !allAppliedJobs || allAppliedJobs.length === 0 ? (
@@ -103,56 +106,58 @@ const AppliedJobAccordion = () => {
               const currentStage = getCurrentJobStatusIndex(job.status);
               return (
                 <AccordionItem key={job._id} value={job._id}>
-                  <AccordionTrigger>
-                    <div className="flex justify-between w-full">
-                      <div>
-                        <div className="font-semibold">{job.job?.company?.name}</div>
-                        <div className="text-sm text-gray-600">{job.job?.title}</div>
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-md p-4 mb-4">
+                    <AccordionTrigger>
+                      <div className="flex justify-between w-full">
+                        <div>
+                          <div className="font-semibold">{job.job?.company?.name}</div>
+                          <div className="text-sm text-gray-600">{job.job?.title}</div>
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {job.createdAt.split("T")[0]}
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-500">
-                        {job.createdAt.split("T")[0]}
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="flex flex-col w-full">
-                      {/* Top Row: Circles and Lines */}
-                      <div className="flex items-center justify-between w-full">
-                        {["applied", "viewed", "accepted"].flatMap((stage, index, array) => {
-                          const elements = [
-                            <div key={`circle-${stage}`} className="flex flex-col items-center">
-                              {renderCircleIcon(index, currentStage, job.status)}
-                            </div>
-                          ];
-
-                          if (index < array.length - 1) {
-                            const isLineCompleted = index < currentStage;
-                            let lineClass = "flex-1 h-1";
-                            if (isLineCompleted) {
-                              lineClass += " bg-green-500";
-                            } else {
-                              lineClass += " bg-gray-300";
-                            }
-                            elements.push(
-                              <div key={`line-${stage}`} className="flex items-center flex-1">
-                                <div className={lineClass}></div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="flex flex-col w-full">
+                        {/* Top Row: Circles and Lines */}
+                        <div className="flex items-center justify-between w-full">
+                          {["applied", "viewed", "accepted"].flatMap((stage, index, array) => {
+                            const elements = [
+                              <div key={`circle-${stage}`} className="flex flex-col items-center">
+                                {renderCircleIcon(index, currentStage, job.status)}
                               </div>
-                            );
-                          }
-                          return elements;
-                        })}
-                      </div>
+                            ];
 
-                      {/* Bottom Row: Text Descriptions */}
-                      <div className="flex justify-between w-full mt-2">
-                        {["applied", "viewed", "accepted"].map((stage, index) => (
-                          <React.Fragment key={`text-${stage}`}>
-                            {renderStageText(stage, index, job.status)}
-                          </React.Fragment>
-                        ))}
+                            if (index < array.length - 1) {
+                              const isLineCompleted = index < currentStage;
+                              let lineClass = "flex-1 h-1";
+                              if (isLineCompleted) {
+                                lineClass += " bg-green-500";
+                              } else {
+                                lineClass += " bg-gray-300";
+                              }
+                              elements.push(
+                                <div key={`line-${stage}`} className="flex items-center flex-1">
+                                  <div className={lineClass}></div>
+                                </div>
+                              );
+                            }
+                            return elements;
+                          })}
+                        </div>
+
+                        {/* Bottom Row: Text Descriptions */}
+                        <div className="flex justify-between w-full mt-2">
+                          {["applied", "viewed", "accepted"].map((stage, index) => (
+                            <React.Fragment key={`text-${stage}`}>
+                              {renderStageText(stage, index, job.status)}
+                            </React.Fragment>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </AccordionContent>
+                    </AccordionContent>
+                  </div>
                 </AccordionItem>
               );
             })}
